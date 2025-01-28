@@ -1,0 +1,30 @@
+package Logbook.Week1;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user for the length of the rectangle
+        System.out.print("Enter the length of the rectangle: ");
+        double length = scanner.nextDouble();
+
+        // Ask the user for the height of the rectangle
+        System.out.print("Enter the height of the rectangle: ");
+        double height = scanner.nextDouble();
+
+        // Calculate the perimeter
+        double perimeter = 2 * (length + height);
+
+        // Calculate the area
+        double area = length * height;
+
+        // Output the perimeter and area
+        System.out.println("The perimeter of the rectangle is: " + perimeter);
+        System.out.println("The area of the rectangle is: " + area);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
