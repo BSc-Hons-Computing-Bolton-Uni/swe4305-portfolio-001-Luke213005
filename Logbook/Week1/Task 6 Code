@@ -1,0 +1,20 @@
+package Logbook.Week1;
+
+import java.util.Scanner;
+import java.time.Year;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        int currentYear = Year.now().getValue();
+        int birthYear = currentYear - age;
+
+        System.out.println("You were born in the year: " + birthYear);
+
+        scanner.close();
+    }
+}
