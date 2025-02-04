@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        # will ask you for a number
         System.out.print("Enter the deposit amount: ");
         double deposit = scanner.nextDouble();
 
@@ -13,6 +14,7 @@ public class Main {
         double interest = deposit * interestRate;
         double totalAmount = deposit + interest;
 
+        # will give you the interest amount you have gotten after one year
         System.out.println("Interest earned: $" + interest);
         System.out.println("Total amount after 1 year: $" + totalAmount);
 
