@@ -6,12 +6,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        # will ask for the first integer
         System.out.print("Enter the first integer: ");
         int num1 = scanner.nextInt();
 
+        # will ask you for the second integer
         System.out.print("Enter the second integer: ");
         int num2 = scanner.nextInt();
 
+        # will add the two integers 
         System.out.println("Original order: " + num1 + " " + num2);
         System.out.println("Reversed order: " + num2 + " " + num1);
 
