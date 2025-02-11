@@ -6,17 +6,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        # will ask you the first number
+        // will ask you the first number
         System.out.print("Enter the first number: ");
         double num1 = scanner.nextDouble();
 
-        # will ask you for a second number
+        // will ask you for a second number
         System.out.print("Enter the second number: ");
         double num2 = scanner.nextDouble();
 
         double average = (num1 + num2) / 2;
 
-        # will put the average of the two numbers
+        // will put the average of the two numbers
         System.out.println("The average of the two numbers is: " + average);
 
         scanner.close();
