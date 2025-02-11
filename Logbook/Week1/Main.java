@@ -6,17 +6,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the length of the rectangle: ");
-        double length = scanner.nextDouble();
+        System.out.print("Enter the deposit amount: ");
+        double deposit = scanner.nextDouble();
 
-        System.out.print("Enter the height of the rectangle: ");
-        double height = scanner.nextDouble();
+        double interestRate = 0.01;
+        double interest = deposit * interestRate;
+        double totalAmount = deposit + interest;
 
-        double perimeter = 2 * (length + height);
-        double area = length * height;
-
-        System.out.println("The perimeter of the rectangle is: " + perimeter);
-        System.out.println("The area of the rectangle is: " + area);
+        System.out.println("Interest earned: $" + interest);
+        System.out.println("Total amount after 1 year: $" + totalAmount);
 
         scanner.close();
     }
