@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        //Ask the user for an exam mark
+        // Ask the user for an exam mark
         System.out.print("Enter your exam mark (0-100): ");
         int mark = scanner.nextInt();
 
