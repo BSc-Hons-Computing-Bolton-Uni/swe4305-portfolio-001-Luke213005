@@ -9,22 +9,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        # will ask you for your birth year
+        // will ask you for your birth year
         System.out.print("Enter your birth year (YYYY): ");
         int birthYear = scanner.nextInt();
 
-        # will ask you for your birth month
+        // will ask you for your birth month
         System.out.print("Enter your birth month (MM): ");
         int birthMonth = scanner.nextInt();
 
-        # will ask you for your birth day
+        // will ask you for your birth day
         System.out.print("Enter your birth day (DD): ");
         int birthDay = scanner.nextInt();
 
         LocalDate birthDate = LocalDate.of(birthYear, birthMonth, birthDay);
         LocalDate today = LocalDate.now();
 
-        # will tell you how many days old you are
+        // will tell you how many days old you are
         long daysOld = ChronoUnit.DAYS.between(birthDate, today);
         System.out.println("You are " + daysOld + " days old.");
         scanner.close();
