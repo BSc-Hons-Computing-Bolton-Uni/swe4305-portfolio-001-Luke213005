@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         char choice;
 
-        # Does a while loop and lets you see a multiplication table
+        // Does a while loop and lets you see a multiplication table
         do {
             System.out.print("Enter a number to see its multiplication table: ");
             int number = scanner.nextInt();
@@ -16,7 +16,7 @@ public class Main {
                 System.out.println(i + " x " + number + " = " + (i * number));
             }
 
-            # ask you if you want to see another table
+            // ask you if you want to see another table
             System.out.print("Would you like to see another table? (y/n): ");
             choice = scanner.next().toLowerCase().charAt(0);
 
