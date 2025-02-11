@@ -1,0 +1,42 @@
+package Logbook.Week2;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your letter grade (A, B, C, D, E, F): ");
+        char grade = scanner.next().toUpperCase().charAt(0);
+
+        String classification;
+
+        switch (grade) {
+            case 'A':
+                classification = "1st";
+                break;
+            case 'B':
+                classification = "2:1";
+                break;
+            case 'C':
+                classification = "2:2";
+                break;
+            case 'D':
+                classification = "3rd";
+                break;
+            case 'E':
+                classification = "Ordinary";
+                break;
+            case 'F':
+                classification = "Fail";
+                break;
+            default:
+                classification = "Invalid grade entered";
+                break;
+        }
+
+        System.out.println("Your university classification: " + classification);
+
+        scanner.close();
+    }
+}

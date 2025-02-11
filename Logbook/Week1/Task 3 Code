@@ -6,9 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        # will ask you put in the length of the rectangle
         System.out.print("Enter the length of the rectangle: ");
         double length = scanner.nextDouble();
- 
+
+        # will ask you to put the height of the rectangle 
         System.out.print("Enter the height of the rectangle: ");
         double height = scanner.nextDouble();
 
@@ -16,6 +18,7 @@ public class Main {
 
         double area = length * height;
 
+        # will ask you to put the perimeter of the rectangle and will + it
         System.out.println("The perimeter of the rectangle is: " + perimeter);
         System.out.println("The area of the rectangle is: " + area);
 
