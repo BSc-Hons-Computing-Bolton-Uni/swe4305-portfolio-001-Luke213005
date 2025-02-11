@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        # will ask you for a random number
+        // will ask you for a random number
         System.out.print("Enter the number of feet: ");
         double feet = scanner.nextDouble();
 
-        # will give you the answer in miles
+        // will give you the answer in miles
         double miles = feet / 5280;
         System.out.println(feet + " feet is equal to " + miles + " miles.");
         scanner.close();
