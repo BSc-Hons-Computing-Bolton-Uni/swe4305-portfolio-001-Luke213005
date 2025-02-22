@@ -1,0 +1,11 @@
+package Logbook.Week3; // Package declaration
+
+public class Main {
+    public static void main(String[] args) {
+        // Instantiate a Student object with your details
+        Student student1 = new Student(100182377, "Luke");
+
+        // Print the student's details
+        student1.print();
+    }
+}
