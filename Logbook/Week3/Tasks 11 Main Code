@@ -1,4 +1,4 @@
-package Logbook.Week3; // Ensure this matches your package declaration
+package Logbook.Week3; // Ensuring this matches the package declaration
 
 public class Main {
     public static void main(String[] args) {
