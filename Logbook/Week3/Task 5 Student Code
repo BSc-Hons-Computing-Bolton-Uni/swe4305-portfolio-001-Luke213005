@@ -4,32 +4,12 @@ package Logbook.Week3; // Package declaration
 public class Student {
 
     // Attributes for ID and name
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     // Constructor to initialize the Student object
     public Student(int id, String name) {
         this.id = id;
-        this.name = name;
-    }
-
-    // Getter method for ID
-    public int getId() {
-        return id;
-    }
-
-    // Setter method for ID
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    // Getter method for name
-    public String getName() {
-        return name;
-    }
-
-    // Setter method for name
-    public void setName(String name) {
         this.name = name;
     }
 
