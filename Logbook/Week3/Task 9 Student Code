@@ -1,0 +1,30 @@
+package Logbook.Week3; // Ensuring this matches the package declaration
+
+// Declaration of the Student class
+public class Student {
+
+    // Attributes for ID, name, and course
+    private final int id;
+    private final String name;
+    private Course course;  // New attribute for the course (Object of the Course class)
+
+    // Constructor to initialize the Student object
+    public Student(int id, String name, Course course) {
+        this.id = id;       // Assign the passed value to the student ID
+        this.name = name;   // Assign the passed value to the student name
+        this.course = course; // Assign the passed Course object to the student
+    }
+
+    // Method to print student and course details
+    public void print() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+        // Print course details by calling the print method of the Course class
+        course.print();
+    }
+
+    // Method to enroll the student in a course (assign a course to the student)
+    public void enrol(Course newCourse) {
+        this.course = newCourse;  // Assign the passed Course object to the course attribute
+        System.out.println(name + " has been enrolled in the course: " + newCourse.getName());
+    }
+}
