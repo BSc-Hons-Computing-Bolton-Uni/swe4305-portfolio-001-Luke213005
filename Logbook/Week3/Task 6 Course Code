@@ -1,0 +1,40 @@
+package Logbook.Week3; // Ensure this matches your package declaration
+
+// Declaration of the Course class
+public class Course {
+
+    // Attributes for course code and course name
+    private String code;  // Course code (String type)
+    private String name;  // Course name (String type)
+
+    // Constructor to initialize the Course object
+    public Course(String code, String name) {
+        this.code = code;  // Assign the passed value to the course code
+        this.name = name;  // Assign the passed value to the course name
+    }
+
+    // Getter method for course code
+    public String getCode() {
+        return code;
+    }
+
+    // Setter method for course code
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    // Getter method for course name
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for course name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Method to print course details
+    public void print() {
+        System.out.println("Course Code: " + code + ", Course Name: " + name);
+    }
+}
