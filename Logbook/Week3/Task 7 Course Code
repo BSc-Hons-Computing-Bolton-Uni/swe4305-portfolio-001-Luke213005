@@ -1,0 +1,20 @@
+package Logbook.Week3; // Package declaration
+
+// Declaration of the Course class
+public class Course {
+
+    // Attributes for course code and course name
+    private final String code;  // Course code (String type)
+    private final String name;  // Course name (String type)
+
+    // Constructor that allows the course code and name to be passed in
+    public Course(String code, String name) {
+        this.code = code;  // Assign the passed value to the course code
+        this.name = name;  // Assign the passed value to the course name
+    }
+
+    // Method to print course details
+    public void print() {
+        System.out.println("Course Code: " + code + ", Course Name: " + name);
+    }
+}
