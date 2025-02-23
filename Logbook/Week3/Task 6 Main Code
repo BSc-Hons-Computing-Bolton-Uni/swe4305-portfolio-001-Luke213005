@@ -1,0 +1,12 @@
+package Logbook.Week3; // Ensuring this matches the package declaration
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Course object with a course code and name
+        Course course1 = new Course("CS101", "Computer Science");
+
+        // Print the course details using the print method
+        System.out.println("Testing course details...");
+        course1.print(); // This should display the course code and name
+    }
+}
