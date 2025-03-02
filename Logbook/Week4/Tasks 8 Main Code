@@ -3,7 +3,8 @@ package Logbook.Week4;
 public class Main {
     public static void main(String[] args) {
         // Create a Course object with a name and code
-        Course course1 = new Course("SWE3405", "Computing OOP");
+        Course course1 = new Course("BOLTON Computing\n" +
+                "Level 4 (A1007-1001)", "Computing");
 
         // Create a Student object with ID and Name (marks are assigned randomly in the constructor)
         Student student1 = new Student(100182377, "Luke");
