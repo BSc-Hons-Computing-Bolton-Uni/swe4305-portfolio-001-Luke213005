@@ -1,0 +1,42 @@
+package Logbook.Week5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class StockList {
+    private final List<Product> products;
+
+    public StockList() {
+        this.products = new ArrayList<>();
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void sellProduct(int id, int amount) {
+        for (Product product : products) {
+            if (product.getId() == id) {
+                product.decreaseQuantity(amount);
+                return;
+            }
+        }
+        System.out.println("Product ID not found.");
+    }
+
+    public void restockProduct(int id, int amount) {
+        for (Product product : products) {
+            if (product.getId() == id) {
+                product.increaseQuantity(amount);
+                return;
+            }
+        }
+        System.out.println("Product ID not found.");
+    }
+
+    public void printStock() {
+        for (Product product : products) {
+            product.print();
+        }
+    }
+}
