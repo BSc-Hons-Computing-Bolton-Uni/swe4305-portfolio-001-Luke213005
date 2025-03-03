@@ -1,0 +1,15 @@
+package Logbook.Week5;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Create an instance of StockDemo to test the functionality
+        StockDemo demo = new StockDemo();
+
+        // Run the test methods from StockDemo
+        demo.testAddProducts();             // Test adding products
+        demo.testRemoveProduct();           // Test removing a product
+        demo.testFindProductById();         // Test finding a product by ID
+        demo.testFindProductByName();       // Test finding a product by Name
+    }
+}
