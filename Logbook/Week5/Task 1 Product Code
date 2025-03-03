@@ -1,0 +1,33 @@
+package Logbook.Week5;
+
+public class Product {
+    private final int id;
+    private final String name;
+    private int quantity;
+
+    public Product(int id, String name, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void increaseQuantity(int amount) {
+        if (amount > 0) {
+            this.quantity += amount;
+        }
+    }
+
+    public void decreaseQuantity(int amount) {
+        if (amount > 0 && this.quantity >= amount) {
+            this.quantity -= amount;
+        }
+    }
+
+    public void print() {
+        System.out.println("Product ID: " + id + ", Name: " + name + ", Quantity: " + quantity);
+    }
+}
