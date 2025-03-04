@@ -1,4 +1,4 @@
-package ProjectA;
+package Logbook.ProjectA;
 
 import java.util.ArrayList;
 

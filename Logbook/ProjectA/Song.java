@@ -1,4 +1,4 @@
-package ProjectA;
+package Logbook.ProjectA;
 
 public class Song {
     private final String title;
