@@ -1,0 +1,26 @@
+package Logbook.Week2;
+
+import java.time.Year;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        int currentYear = Year.now().getValue();
+        int birthYear = currentYear - age;
+
+        System.out.println("You were born in the year: " + birthYear);
+
+        if (age >= 18) {
+            System.out.println("You are an adult.");
+        } else {
+            System.out.println("You are under 18.");
+        }
+
+        scanner.close();
+    }
+}
