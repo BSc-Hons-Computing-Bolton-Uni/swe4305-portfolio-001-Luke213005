@@ -1,0 +1,37 @@
+package Logbook.Week4;
+
+public class Module {
+    private final String moduleCode;  // Module code (String type)
+    private final String moduleName;  // Module name (String type)
+
+    // Constructor to initialize module code and module name
+    public Module(String moduleCode, String moduleName) {
+        this.moduleCode = moduleCode;
+        this.moduleName = moduleName;
+    }
+
+    // Getter for module code
+    public String getModuleCode() {
+        return moduleCode;
+    }
+
+    // Getter for module name
+    public String getModuleName() {
+        return moduleName;
+    }
+
+    // Method to convert a numeric mark into a letter grade
+    public String convertToGrade(int mark) {
+        if (mark >= 70) {
+            return "A";
+        } else if (mark >= 60) {
+            return "B";
+        } else if (mark >= 50) {
+            return "C";
+        } else if (mark >= 40) {
+            return "D";
+        } else {
+            return "F";
+        }
+    }
+}

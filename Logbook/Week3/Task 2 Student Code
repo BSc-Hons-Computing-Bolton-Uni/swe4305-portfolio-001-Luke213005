@@ -1,0 +1,30 @@
+package Logbook.Week3; // Declaring the package
+
+// Declaration of the Student class
+public class Student {
+
+    // Declare attributes for ID and name
+    private int id;      // ID attribute of type int
+    private String name; // Name attribute of type String
+
+    // Constructor to initialize the Student object with values for id and name
+    public Student(int id, String name) {
+        this.id = id;    // Assigning the passed value to the id field
+        this.name = name; // Assigning the passed value to the name field
+    }
+
+    // Setter method for the id attribute
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Setter method for the name attribute
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Method to display the student's details
+    public void displayStudent() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+    }
+}

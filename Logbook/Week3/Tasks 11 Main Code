@@ -1,0 +1,25 @@
+package Logbook.Week3; // Ensuring this matches the package declaration
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Course object by passing course code and name
+        Course course1 = new Course("SWE4305", "Computing");
+
+        // Create a new Student object with ID, name, and an initial course
+        Student student1 = new Student(100182377, "Luke", course1);
+
+        // Print the student details and the course they are enrolled in
+        System.out.println("Testing student and course details...");
+        student1.print();  // This will display the student's details along with the course information
+
+        // Now create another Course object to enroll the student in a new course
+        Course course2 = new Course("SWE4303", "Computer Infrastructure");
+
+        // Enroll the student in the new course
+        student1.enrol(course2);  // Pass course2 to the enrol method
+
+        // Print the updated student details after enrollment
+        System.out.println("\nUpdated student details after enrollment...");
+        student1.print();  // This will now display the updated course information
+    }
+}

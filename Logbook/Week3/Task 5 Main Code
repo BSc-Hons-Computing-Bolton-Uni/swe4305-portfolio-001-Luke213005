@@ -1,0 +1,12 @@
+package Logbook.Week3; // Package declaration
+
+public class Main {
+    public static void main(String[] args) {
+        // Instantiate a Student object with test values
+        Student student1 = new Student(100182377, "Luke");
+
+        // Call the print() method to test if values were assigned correctly
+        System.out.println("Testing student details...");
+        student1.print(); // This should output the correct ID and Name
+    }
+}

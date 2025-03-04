@@ -1,0 +1,36 @@
+package Logbook.Week4;
+
+import java.util.ArrayList;
+
+public class Course {
+    private final String code;  // Course code (String type)
+    private final String name;  // Course name (String type)
+    private final ArrayList<Module> modules; // List of modules in the course
+
+    // Constructor to initialize course code, name, and add default modules
+    public Course(String code, String name) {
+        this.code = code;
+        this.name = name;
+        this.modules = new ArrayList<>();
+
+        // Add four predefined modules
+        modules.add(new Module("SWE4305", "Programming"));
+        modules.add(new Module("SWE4304", "Databases"));
+        modules.add(new Module("SWE4303", "Computer Infrastructure"));
+        modules.add(new Module("SWE4302", "Fundamentals"));
+    }
+
+    // Getter for course modules
+    public ArrayList<Module> getModules() {
+        return modules;
+    }
+
+    // Method to print course details including its modules
+    public void print() {
+        System.out.println("Course Code: " + code + ", Course Name: " + name);
+        System.out.println("Modules in this course:");
+        for (Module module : modules) {
+            System.out.println(module.getModuleCode() + " - " + module.getModuleName());
+        }
+    }
+}

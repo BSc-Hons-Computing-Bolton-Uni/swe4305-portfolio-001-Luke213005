@@ -1,0 +1,44 @@
+package Logbook.Week5;
+
+public class Product {
+    private final int id;
+    private final String name;
+    private int quantity;
+
+    // Constructor
+    public Product(int id, String name, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    // Increase quantity
+    public void increaseQuantity(int amount) {
+        if (amount > 0) {
+            quantity += amount;
+        }
+    }
+
+    // Decrease quantity (Ensure stock doesn’t go negative)
+    public void decreaseQuantity(int amount) {
+        if (amount > 0 && quantity >= amount) {
+            quantity -= amount;
+        } else {
+            System.out.println("Not enough stock to remove " + amount + " units of " + name);
+        }
+    }
+
+    // Print product details
+    public void print() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Quantity: " + quantity);
+    }
+}

@@ -1,0 +1,35 @@
+package Logbook.Week5;
+
+class StockDemo {
+    private final StockList stockList;
+
+    public StockDemo() {
+        stockList = new StockList();
+
+        // Adding some products
+        stockList.addProduct(new Product(101, "Laptop", 10));
+        stockList.addProduct(new Product(102, "Smartphone", 20));
+        stockList.addProduct(new Product(103, "Headphones", 15));
+        stockList.addProduct(new Product(104, "Keyboard", 25));
+    }
+
+    public void runDemo() {
+        System.out.println("Initial stock:");
+        stockList.printStock();
+
+        // Sell some products
+        System.out.println("\nSelling 3 Laptops...");
+        stockList.sellProduct(101, 3);
+
+        System.out.println("\nSelling 5 Smartphones...");
+        stockList.sellProduct(102, 5);
+
+        // Restock products
+        System.out.println("\nRestocking 10 Keyboards...");
+        stockList.restockProduct(104, 10);
+
+        // Print updated stock
+        System.out.println("\nUpdated stock:");
+        stockList.printStock();
+    }
+}

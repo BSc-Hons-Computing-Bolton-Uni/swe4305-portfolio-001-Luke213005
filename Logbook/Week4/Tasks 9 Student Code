@@ -1,0 +1,37 @@
+package Logbook.Week4;
+
+import java.util.Random;
+
+public class Student {
+    private final int id;
+    private final String name;
+    private final Course course;
+    private final int[] marks; // Array to store marks
+
+    public Student(int id, String name, Course course) {
+        this.id = id;
+        this.name = name;
+        this.course = course;
+        this.marks = new int[4]; // 4 modules
+
+        // Generate random marks between 0-100 for each module
+        Random random = new Random();
+        for (int i = 0; i < marks.length; i++) {
+            marks[i] = random.nextInt(101); // Generates number between 0-100
+        }
+    }
+
+    public void print() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+        course.print();
+
+        System.out.println("\nModule Results:");
+        for (int i = 0; i < course.getModules().size(); i++) {
+            Module module = course.getModules().get(i);
+            int mark = marks[i];
+            Grade grade = module.convertMarkToGrade(mark);
+            System.out.println(module.getModuleCode() + " - " + module.getModuleName() + ": " +
+                    mark + " (" + grade + ")");
+        }
+    }
+}

@@ -1,0 +1,15 @@
+package Logbook.Week3; // Ensuring this matches the package declaration
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Course object with a course code and name
+        Course course1 = new Course("SWE4305", "Computing - Object Oriented Programming");
+
+        // Create a new Student object with ID, name, and course passed to the constructor
+        Student student1 = new Student(100182377, "Luke", course1);
+
+        // Print the student and course details
+        System.out.println("Testing student and course details...");
+        student1.print();  // This will display the student's details along with the course information
+    }
+}

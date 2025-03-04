@@ -1,0 +1,48 @@
+package Logbook.Week4;
+
+import java.util.Random;
+
+public class Student {
+    private final int id;  // Student ID (int type)
+    private final String name;  // Student name (String type)
+    private final int[] marks;  // Array of marks for 4 modules
+    private Course course;  // Course the student is enrolled in
+
+    // Constructor to initialize ID, Name, and Marks
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.marks = new int[4];  // Array to store marks for 4 modules
+
+        // Assign random marks between 0 and 100 to each module
+        Random rand = new Random();
+        for (int i = 0; i < marks.length; i++) {
+            marks[i] = rand.nextInt(101);  // Random number between 0 and 100
+        }
+    }
+
+    // Method to enroll the student in a course
+    public void enrol(Course course) {
+        this.course = course;
+    }
+
+    // Method to print the student details, course details, and marks for each module
+    public void print() {
+        // Printing student details
+        System.out.println("Student ID: " + id + ", Name: " + name);
+
+        // Printing course details
+        if (course != null) {
+            course.print();
+        }
+
+        // Printing module details with corresponding marks
+        System.out.println("Marks for the modules:");
+        if (course != null && course.getModules().size() == marks.length) {
+            for (int i = 0; i < course.getModules().size(); i++) {
+                Module module = course.getModules().get(i);
+                System.out.println(module.moduleCode() + " - " + module.moduleName() + ": " + marks[i]);
+            }
+        }
+    }
+}

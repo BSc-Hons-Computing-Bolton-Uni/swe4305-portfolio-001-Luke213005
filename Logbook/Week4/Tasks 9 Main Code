@@ -1,0 +1,11 @@
+package Logbook.Week4;
+
+public class Main {
+    public static void main(String[] args) {
+        Course course = new Course("BOLTON Computing\n" +
+                "Level 4 (A1007-1001)", "Computing");
+        Student student = new Student(100182377, "Luke", course);
+
+        student.print(); // Print student, course, and module grades
+    }
+}
