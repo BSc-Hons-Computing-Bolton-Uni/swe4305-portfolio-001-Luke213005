@@ -1,37 +1,30 @@
+package Logbook.Week3;
+
 public class Student {
-    // Attributes
-    private int id;      // Student ID (integer)
-    private String name; // Student Name (String)
 
-    // Constructor
-    public Student(int id, String name) {
+    private final int id;        // Student ID (int type)
+    private final String name;   // Student name (String type)
+    private Course course; // Course object (type Course)
+
+    // Constructor to initialize Student object with ID, name, and course
+    public Student(int id, String name, Course course) {
         this.id = id;
         this.name = name;
+        this.course = course;
     }
-
-    // Getter for ID
-    public int getId() {
-        return id;
-    }
-
-    // Setter for ID
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    // Getter for Name
-    public String getName() {
-        return name;
-    }
-
-    // Setter for Name
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Method to display student details
-    public void displayStudent() {
+    // Method to print student details including the enrolled course
+    public void print() {
         System.out.println("Student ID: " + id + ", Name: " + name);
+        System.out.print("Enrolled in: ");
+        if (course != null) {
+            course.print(); // Call the print method of the Course class
+        } else {
+            System.out.println("No course enrolled.");
+        }
+    }
+    // Enroll method to assign a course to the student
+    public void enrol(Course newCourse) {
+        this.course = newCourse;
+        System.out.println(name + " has been enrolled in the course: " + newCourse.getName());
     }
 }
-

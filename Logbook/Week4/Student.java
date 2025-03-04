@@ -1,0 +1,79 @@
+package Logbook.Week4;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Student {
+    private final int id;
+    private final String name;
+    private final Course course;
+    private final List<ModuleMark> moduleMarks;
+
+    public Student(int id, String name, Course course) {
+        this.id = id;
+        this.name = name;
+        this.course = course;
+        this.moduleMarks = new ArrayList<>();
+
+        // Generate random marks and associate them with modules
+        Random random = new Random();
+        for (Module module : course.getModules()) {
+            int mark = random.nextInt(101); // Generates number between 0-100
+            moduleMarks.add(new ModuleMark(module, mark));
+        }
+    }
+
+    public void print() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+        course.print();
+
+        System.out.println("\nModule Results:");
+        for (ModuleMark moduleMark : moduleMarks) {
+            moduleMark.print();
+        }
+
+        // Print descriptive statistics
+        printStatistics();
+    }
+
+    private void printStatistics() {
+        if (moduleMarks.isEmpty()) {
+            System.out.println("No marks available for statistics.");
+            return;
+        }
+
+        int minMark = Integer.MAX_VALUE;
+        int maxMark = Integer.MIN_VALUE;
+        double totalMarks = 0;
+        ModuleMark minModule = null;
+        ModuleMark maxModule = null;
+
+        for (ModuleMark moduleMark : moduleMarks) {
+            int mark = moduleMark.getMark();
+            totalMarks += mark;
+
+            if (mark < minMark) {
+                minMark = mark;
+                minModule = moduleMark;
+            }
+            if (mark > maxMark) {
+                maxMark = mark;
+                maxModule = moduleMark;
+            }
+        }
+
+        double meanMark = totalMarks / moduleMarks.size();
+
+        System.out.println("\nStatistics:");
+        if (minModule != null) {
+            System.out.println("Minimum Mark: " + minMark + " in " +
+                    minModule.getModule().getModuleName() + " (" + name + ")");
+        }
+        if (maxModule != null) {
+            System.out.println("Maximum Mark: " + maxMark + " in " +
+                    maxModule.getModule().getModuleName() + " (" + name + ")");
+        }
+        System.out.println("Mean Mark: " + String.format("%.2f", meanMark) + " (" + name + ")");
+    }
+}
