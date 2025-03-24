@@ -1,0 +1,28 @@
+package Logbook.Week5;
+
+public class Product {
+    private final int id;
+    private final String name;
+    private final int quantity;
+
+    // Constructor
+    public Product(int id, String name, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    // Getter methods
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    // Print product details
+    public void print() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Quantity: " + quantity);
+    }
+}

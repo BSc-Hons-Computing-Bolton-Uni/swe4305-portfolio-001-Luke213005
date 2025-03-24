@@ -1,0 +1,63 @@
+package Logbook.Week5;
+
+import java.util.ArrayList;
+
+class StockList {
+    private final ArrayList<Product> stock;
+
+    // Constructor to initialize the stock list
+    public StockList() {
+        stock = new ArrayList<>();
+    }
+
+    // Method to add a product to the stock list
+    public void addProduct(Product product) {
+        stock.add(product);
+        System.out.println("Added product: " + product.getName());
+    }
+
+    // Method to remove a product from the stock list by its ID
+    public void removeProduct(int productId) {
+        for (Product product : stock) {
+            if (product.getId() == productId) {
+                stock.remove(product);
+                System.out.println("Removed product: " + product.getName());
+                return;
+            }
+        }
+        System.out.println("Product with ID " + productId + " not found.");
+    }
+
+    // Method to find a product in the stock list by its ID
+    public Product findProductById(int productId) {
+        for (Product product : stock) {
+            if (product.getId() == productId) {
+                return product;
+            }
+        }
+        System.out.println("Product with ID " + productId + " not found.");
+        return null;  // If product is not found, return null
+    }
+
+    // Method to find a product in the stock list by its Name
+    public Product findProductByName(String name) {
+        for (Product product : stock) {
+            if (product.getName().equalsIgnoreCase(name)) {
+                return product;
+            }
+        }
+        System.out.println("Product with name '" + name + "' not found.");
+        return null;  // If product is not found, return null
+    }
+
+    // Method to print all products in the stock list
+    public void printStock() {
+        if (stock.isEmpty()) {
+            System.out.println("No products in stock.");
+        } else {
+            for (Product product : stock) {
+                product.print();
+            }
+        }
+    }
+}

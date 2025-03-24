@@ -1,0 +1,28 @@
+package Logbook.Week3;
+
+public class Student {
+    // Attributes
+    private int id;      // Student ID (integer)
+    private String name; // Student Name (String)
+
+    // Constructor to initialize id and name
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // Setter for ID
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Setter for Name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Method to display student details
+    public void displayStudent() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+    }
+}

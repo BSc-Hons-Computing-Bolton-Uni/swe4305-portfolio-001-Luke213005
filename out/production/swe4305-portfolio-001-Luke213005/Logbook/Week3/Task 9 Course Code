@@ -1,0 +1,24 @@
+package Logbook.Week3; // Ensuring this matches the package declaration
+
+public class Course {
+
+    // Attributes for course code and course name
+    private final String code;
+    private final String name;
+
+    // Constructor that allows the course code and name to be passed in
+    public Course(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    // Getter method for course name
+    public String getName() {
+        return name;
+    }
+
+    // Method to print course details
+    public void print() {
+        System.out.println("Course Code: " + code + ", Course Name: " + name);
+    }
+}

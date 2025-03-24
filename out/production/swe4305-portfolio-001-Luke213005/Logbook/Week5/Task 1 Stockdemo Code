@@ -1,0 +1,25 @@
+package Logbook.Week5;
+
+class StockDemo {
+    public static void main(String[] args) {
+        StockList stock = new StockList();
+
+        // Adding products
+        stock.addProduct(new Product(101, "Laptop", 10));
+        stock.addProduct(new Product(102, "Phone", 20));
+        stock.addProduct(new Product(103, "Tablet", 15));
+
+        System.out.println("Initial Stock:");
+        stock.printStock();
+
+        // Selling products
+        System.out.println("\nSelling 5 Phones:");
+        stock.sellProduct(102, 5);
+        stock.printStock();
+
+        // Restocking products
+        System.out.println("\nRestocking 10 Tablets:");
+        stock.restockProduct(103, 10);
+        stock.printStock();
+    }
+}

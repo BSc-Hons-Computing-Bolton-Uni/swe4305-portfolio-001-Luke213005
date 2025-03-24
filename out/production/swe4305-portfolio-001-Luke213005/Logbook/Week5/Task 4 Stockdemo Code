@@ -1,0 +1,111 @@
+package Logbook.Week5;
+
+class StockDemo {
+
+    // Test Method 1: Add Products and Print Stock
+    public void testAddProducts() {
+        // Create a StockList instance
+        StockList stockList = new StockList();
+
+        // Create product objects
+        Product product1 = new Product(101, "Laptop", 10);
+        Product product2 = new Product(102, "Smartphone", 20);
+        Product product3 = new Product(103, "Headphones", 15);
+
+        // Add products to stock
+        stockList.addProduct(product1);
+        stockList.addProduct(product2);
+        stockList.addProduct(product3);
+
+        // Print all products in the stock
+        System.out.println("Stock after adding products:");
+        stockList.printStock();
+    }
+
+    // Test Method 2: Remove a Product and Print Updated Stock
+    public void testRemoveProduct() {
+        // Create a StockList instance
+        StockList stockList = new StockList();
+
+        // Create product objects
+        Product product1 = new Product(101, "Laptop", 10);
+        Product product2 = new Product(102, "Smartphone", 20);
+        Product product3 = new Product(103, "Headphones", 15);
+
+        // Add products to stock
+        stockList.addProduct(product1);
+        stockList.addProduct(product2);
+        stockList.addProduct(product3);
+
+        // Print stock before removal
+        System.out.println("Stock before removal:");
+        stockList.printStock();
+
+        // Remove a product by ID
+        stockList.removeProduct(102);  // Removing Smartphone
+
+        // Print stock after removal
+        System.out.println("\nStock after removal of product with ID 102 (Smartphone):");
+        stockList.printStock();
+    }
+
+    // Test Method 3: Search for a Product by ID
+    public void testFindProductById() {
+        // Create a StockList instance
+        StockList stockList = new StockList();
+
+        // Create product objects
+        Product product1 = new Product(101, "Laptop", 10);
+        Product product2 = new Product(102, "Smartphone", 20);
+        Product product3 = new Product(103, "Headphones", 15);
+
+        // Add products to stock
+        stockList.addProduct(product1);
+        stockList.addProduct(product2);
+        stockList.addProduct(product3);
+
+        // Search for a product by ID
+        System.out.println("\nSearching for product with ID 102...");
+        Product foundProduct = stockList.findProductById(102);
+        if (foundProduct != null) {
+            System.out.println("Found product: " + foundProduct.getName() + ", Quantity: " + foundProduct.getQuantity());
+        } else {
+            System.out.println("Product not found.");
+        }
+    }
+
+    // Test Method 4: Search for a Product by Name
+    public void testFindProductByName() {
+        // Create a StockList instance
+        StockList stockList = new StockList();
+
+        // Create product objects
+        Product product1 = new Product(101, "Laptop", 10);
+        Product product2 = new Product(102, "Smartphone", 20);
+        Product product3 = new Product(103, "Headphones", 15);
+
+        // Add products to stock
+        stockList.addProduct(product1);
+        stockList.addProduct(product2);
+        stockList.addProduct(product3);
+
+        // Search for a product by Name
+        System.out.println("\nSearching for product with name 'Smartphone'...");
+        Product foundProduct = stockList.findProductByName("Smartphone");
+        if (foundProduct != null) {
+            System.out.println("Found product: " + foundProduct.getName() + ", Quantity: " + foundProduct.getQuantity());
+        } else {
+            System.out.println("Product not found.");
+        }
+    }
+
+    public static void main(String[] args) {
+        StockDemo demo = new StockDemo();
+
+        // Run test methods
+        demo.testAddProducts();
+        demo.testRemoveProduct();
+        demo.testFindProductById();
+        demo.testFindProductByName();
+    }
+}

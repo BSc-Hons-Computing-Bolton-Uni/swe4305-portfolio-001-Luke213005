@@ -1,0 +1,9 @@
+package Logbook.Week5;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create and run StockDemo
+        StockDemo stockDemo = new StockDemo();
+        stockDemo.run();
+    }
+}

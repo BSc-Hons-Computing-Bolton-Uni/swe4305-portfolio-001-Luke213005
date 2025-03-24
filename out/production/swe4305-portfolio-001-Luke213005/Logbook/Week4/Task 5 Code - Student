@@ -1,0 +1,46 @@
+package Logbook.Week4;
+
+public class Student {
+    private final int id;
+    private final String name;
+    private Course course;  // A course object
+    private final int[] marks;  // Array to store 4 marks
+
+    // Constructor to initialize student details, marks array, and assign marks to modules
+    public Student(int id, String name, int mark1, int mark2, int mark3, int mark4) {
+        this.id = id;
+        this.name = name;
+        this.marks = new int[4];  // Initialize marks array to store 4 marks
+
+        // Assign marks to each module
+        this.marks[0] = mark1;
+        this.marks[1] = mark2;
+        this.marks[2] = mark3;
+        this.marks[3] = mark4;
+    }
+
+    // Enroll method: Assign a course to this student
+    public void enrol(Course course) {
+        this.course = course;
+    }
+
+    // Print student details, course details, and marks with corresponding modules
+    public void print() {
+
+        System.out.println("Student ID: " + id + ", Name: " + name);
+        // Check if the student is enrolled in a course
+        if (course != null) {
+            // Print course details
+            course.print();
+
+            // Print marks for each module in the course
+            System.out.println("Marks for the modules:");
+            for (int i = 0; i < course.getModules().size(); i++) {
+                Module module = course.getModules().get(i);
+                System.out.println(module.getModuleCode() + " - " + module.getModuleName() + ": " + marks[i]);
+            }
+        } else {
+            System.out.println("No course enrolled.");
+        }
+    }
+}

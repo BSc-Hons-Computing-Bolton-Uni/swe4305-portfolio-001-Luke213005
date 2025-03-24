@@ -1,0 +1,20 @@
+package Logbook.Week4;
+
+public class ModuleMark {
+    private final Module module;
+    private final int mark;
+
+    public ModuleMark(Module module, int mark) {
+        this.module = module;
+        this.mark = mark;
+    }
+
+    public Grade getGrade() {
+        return module.convertMarkToGrade(mark);
+    }
+
+    public void print() {
+        System.out.println(module.getModuleCode() + " - " + module.getModuleName() +
+                ": " + mark + " (" + getGrade() + ")");
+    }
+}

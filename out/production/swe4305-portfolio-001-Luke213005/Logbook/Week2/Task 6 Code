@@ -1,0 +1,28 @@
+package Logbook.Week2;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        char choice;
+
+        // Does a while loop and lets you see a multiplication table
+        do {
+            System.out.print("Enter a number to see its multiplication table: ");
+            int number = scanner.nextInt();
+
+            for (int i = 1; i <= 12; i++) {
+                System.out.println(i + " x " + number + " = " + (i * number));
+            }
+
+            // ask you if you want to see another table
+            System.out.print("Would you like to see another table? (y/n): ");
+            choice = scanner.next().toLowerCase().charAt(0);
+
+        } while (choice == 'y');
+
+        System.out.println("Goodbye! Thanks for using the multiplication table generator.");
+        scanner.close();
+    }
+}

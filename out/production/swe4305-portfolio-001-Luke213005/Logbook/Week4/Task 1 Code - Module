@@ -1,0 +1,17 @@
+package Logbook.Week4;
+
+public class Module {
+    private final String moduleName;
+    private final String moduleCode;
+
+    // Constructor
+    public Module(String moduleName, String moduleCode) {
+        this.moduleName = moduleName;
+        this.moduleCode = moduleCode;
+    }
+
+    // Print method to display module details
+    public void print() {
+        System.out.println("Module Code: " + moduleCode + ", Module Name: " + moduleName);
+    }
+}
