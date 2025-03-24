@@ -12,7 +12,7 @@ public class Playlist {
 
     // Add a new song to the playlist
     public void addSong(Song song) {
-        songs.add(song);
+        songs.add(song);  // This should add the song to the playlist
     }
 
     // Remove a song from the playlist by title
@@ -43,5 +43,10 @@ public class Playlist {
         if (!found) {
             System.out.println("No songs found with play count greater than " + playCount);
         }
+    }
+
+    // New method to get the songs list for testing purposes
+    public ArrayList<Song> getSongs() {
+        return songs;  // Return the list of songs directly
     }
 }

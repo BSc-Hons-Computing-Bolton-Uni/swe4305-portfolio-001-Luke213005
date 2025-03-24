@@ -7,15 +7,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        # will ask you for your age
+        // will ask you for your age
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
 
-        # will do the maths of when you was born
+        // will do the maths of when you was born
         int currentYear = Year.now().getValue();
         int birthYear = currentYear - age;
 
-        # will tell you when you was born 
+        // will tell you when you was born 
         System.out.println("You were born in the year: " + birthYear);
 
         scanner.close();
