@@ -1,4 +1,4 @@
-package ProjectB;
+package Logbook.ProjectB;
 
 public class Module {
     private final String moduleCode;

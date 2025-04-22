@@ -1,4 +1,4 @@
-package ProjectB;
+package Logbook.ProjectB;
 
 import java.util.Scanner;
 
