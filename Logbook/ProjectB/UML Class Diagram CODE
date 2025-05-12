@@ -1,0 +1,62 @@
+@startuml
+title Student Performance Management System - UML Class Diagram
+
+package "projectb" {
+
+    class Module {
+        - moduleCode: String
+        - moduleName: String
+        - isCore: boolean
+        + Module(code: String, name: String, isCore: boolean)
+        + getModuleCode(): String
+        + getModuleName(): String
+        + isCore(): boolean
+        + toString(): String
+    }
+
+    class Student {
+        - studentId: String
+        - studentName: String
+        - marks: Map<Module, Integer>
+        + Student(id: String, name: String)
+        + getStudentId(): String
+        + getStudentName(): String
+        + addModule(module: Module): void
+        + setMark(module: Module, mark: int): void
+        + getMarks(): Map<Module, Integer>
+        + getGrade(mark: int): String
+        + displayTranscript(): void
+    }
+
+    class ModuleManager {
+        - modules: Map<String, Module>
+        + ModuleManager()
+        + addModule(code: String, name: String, isCore: boolean): void
+        + getModule(code: String): Module
+        + getAllModules(): Collection<Module>
+        + displayModules(): void
+    }
+
+    class StudentManager {
+        - students: Map<String, Student>
+        - moduleManager: ModuleManager
+        + StudentManager(moduleManager: ModuleManager)
+        + addStudent(id: String, name: String): void
+        + getStudent(id: String): Student
+        + enrollStudentInModule(studentId: String, moduleCode: String): void
+        + inputMark(studentId: String, moduleCode: String, mark: int): void
+        + displayStudent(id: String): void
+    }
+
+    class Main {
+        + main(args: String[]): void
+    }
+
+    Student "1" --> "*" Module : uses
+    ModuleManager "1" --> "*" Module : manages
+    StudentManager "1" --> "*" Student : manages
+    StudentManager "1" --> "1" ModuleManager : uses
+    Main --> ModuleManager
+    Main --> StudentManager
+}
+@enduml
