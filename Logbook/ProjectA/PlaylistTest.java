@@ -57,8 +57,6 @@ class PlaylistTest {
         playlist.addSong(new Song("Hope", "NF", 213700000));
         playlist.addSong(new Song("Iridescent", "Linkin Park", 132000000));
 
-        // Here we don't have any assertion since it's about checking the printed output manually
-        // But you could capture the system output and check that the correct songs are printed
         playlist.printAllSongs(); // You will need to check the printed output manually
     }
 
@@ -70,6 +68,4 @@ class PlaylistTest {
         // Verify that it correctly prints songs with a play count greater than 200
         playlist.printSongsAbovePlayCount(200);  // Should print "Song 2"
     }
-
-    // Optional: You can add more tests to cover other cases
 }
